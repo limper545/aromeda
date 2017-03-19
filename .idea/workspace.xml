@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b076c1-56c6-45e4-9f85-ca09416ff582" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/websockets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/aromeda/Service/socket.factory.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/login.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/registrierung.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/websockets.js" afterPath="$PROJECT_DIR$/server/websockets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js" afterPath="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html" afterPath="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js" afterPath="$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html" afterPath="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/index.html" afterPath="$PROJECT_DIR$/view/aromeda/index.html" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,41 +31,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="hauptseite.component.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="59" />
+            <state relative-caret-position="153">
+              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="websockets.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/websockets.js">
+      <file leaf-file-name="hauptseite.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/aromeda/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.component.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -97,18 +72,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js" />
         <option value="$PROJECT_DIR$/view/aromeda/app/app.module.js" />
         <option value="$PROJECT_DIR$/view/aromeda/app/app.config.js" />
-        <option value="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Login/login.html" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html" />
-        <option value="$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js" />
-        <option value="$PROJECT_DIR$/view/aromeda/index.html" />
         <option value="$PROJECT_DIR$/view/aromeda/Service/socket.factory.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/server/websockets.js" />
+        <option value="$PROJECT_DIR$/view/aromeda/index.html" />
+        <option value="$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js" />
+        <option value="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html" />
+        <option value="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js" />
       </list>
     </option>
   </component>
@@ -255,7 +230,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hauptseite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aromeda" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery.cookie" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,7 +376,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5063000" />
+    <option name="totallyTimeSpent" value="6839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -476,22 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Login/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -516,18 +533,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/websockets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/aromeda/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="187">
+          <caret line="20" column="19" lean-forward="true" selection-start-line="19" selection-start-column="94" selection-end-line="20" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -540,18 +573,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="57" selection-end-line="72" selection-end-column="59" />
+        <state relative-caret-position="153">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/websockets.js">
+    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="12" selection-end-column="17" />
           <folding />
         </state>
       </provider>
