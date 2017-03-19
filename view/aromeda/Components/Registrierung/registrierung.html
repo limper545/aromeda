@@ -42,7 +42,10 @@
                 <tr>
                     <td><label> E-Mail </label></td>
                     <td class="col-md-2"><input type='email' class="form-control" id='regEmail' ng-model='reg.mail'
-                                                required/></td>
+                                                required/>
+                        <div id="meldungMail"></div>
+                    </td>
+
                 </tr>
 
                 <tr>
@@ -56,18 +59,25 @@
                     <td><label> Benutzername </label></td>
                     <td class="col-md-2"><input type='text' class="form-control" id='regBenutzer'
                                                 ng-model='reg.userName' required/></td>
+                    <td>
+                        <div id="meldungUser"></div>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label> Passwort </label></td>
                     <td class="col-md-2"><input type='password' class="form-control" id='regPasswortFirst'
-                                                ng-model='reg.passOne' required/></td>
+                                                ng-model='reg.passOne' required/>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label> Passwort wiederholen </label></td>
+
                     <td class="col-md-2"><input type='password' class="form-control" id='regPasswordSecond'
-                                                ng-model='reg.passTwo' required/></td>
+                                                ng-model='reg.passTwo' required/>
+                        <span id="meldungPasswort"></span>
+                    </td>
                 </tr>
 
                 <tr>
@@ -88,7 +98,4 @@
         </form>
     </div>
 </div>
-{{notLoading}}
-
-<div id="test"></div>
 

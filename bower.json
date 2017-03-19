@@ -9,6 +9,7 @@
   "homepage": "",
   "dependencies": {
     "angular": "1.5.8",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "angular-toastr": "^2.1.1"
   }
 }

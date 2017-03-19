@@ -1,7 +1,7 @@
 angular.module('registrierung', [])
     .component('registrierung', {
         templateUrl: 'Components/Registrierung/registrierung.html',
-        controller: function ($scope) {
+        controller: function ($scope, toastr) {
             $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
@@ -21,16 +21,16 @@ angular.module('registrierung', [])
                             if (res.saved) {
                             } else if (!res.saved) {
                                 if (res.email) {
-                                    document.getElementById('test').innerHTML = 'E-Mail ist schon vergeben';
+                                    toastr.error('Die E-Mail wird bereits verwendet', 'Fehler');
                                 } else if (res.user) {
-                                    document.getElementById('test').innerHTML = 'Benutzname ist schon vergeben.'
+                                    toastr.error('Der Benutzername wird bereits verwendet', 'Fehler');
                                 }
                             }
                         })
                     })
 
                 } else {
-                    //Meldung an den Nutzer, dass Passwörter nicht identisch sind
+                    toastr.error('Die Passwörter sind nicht identisch', 'Fehler');
                 }
                 $scope.notLoading = true;
             };
