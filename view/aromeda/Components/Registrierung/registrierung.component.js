@@ -1,7 +1,7 @@
 angular.module('registrierung', [])
     .component('registrierung', {
         templateUrl: 'Components/Registrierung/registrierung.html',
-        controller: function ($scope, toastr) {
+        controller: function ($scope, $location,  toastr) {
             $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
@@ -19,6 +19,7 @@ angular.module('registrierung', [])
                         $.post(url + '/userReg', getData, function (res) {
                             console.log(res);
                             if (res.saved) {
+                                $location.path('/login');
                             } else if (!res.saved) {
                                 if (res.email) {
                                     toastr.error('Die E-Mail wird bereits verwendet', 'Fehler');

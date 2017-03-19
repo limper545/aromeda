@@ -1,6 +1,7 @@
 
 <html>
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compitable" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +9,7 @@
 
   <!-- External -->
   <script src="../../bower_components/angular/angular.min.js"></script>
+  <script src="../../bower_components//angular-route/angular-route.js"></script>
   <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
   <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
@@ -21,7 +23,7 @@
 </head>
 <body ng-app="Spiel">
 
-  <registrierung></registrierung>
+  <div ng-view></div>
 
   <script src="./app/app.module.js"></script>
   <script src="./app/app.config.js"></script>
