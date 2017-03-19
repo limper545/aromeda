@@ -5,16 +5,16 @@
                 <a class="navbar-brand" href="" style="font-size: 40px">Aromeda</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="">Page 1</a></li>
-                <li><a href="">Page 2</a></li>
-                <li><a href="">Page 3</a></li>
+                <li ng-class="{'active': auswahl == 1 || auswahl == null}"><a href="" ng-click="auswahlHead(1)">Home</a></li>
+                <li ng-class="{'active': auswahl == 2}"><a href="" ng-click="auswahlHead(2)">Facebook</a></li>
+                <li ng-class="{'active': auswahl == 3}"><a href="" ng-click="auswahlHead(3)">Manual</a></li>
+                <li ng-class="{'active': auswahl == 4}"><a href="" ng-click="auswahlHead(4)">About us</a></li>
             </ul>
             <div class="pull-right">
                 <ul class="nav navbar-nav">
-                    <li><a href="">Page 4</a></li>
-                    <li><a href="">Page 5</a></li>
-                    <li><a href="">Logout</a></li>
+                    <li ng-class="{'active': auswahl == 5}"><a href="" ng-click="auswahlHead(5)">Support</a></li>
+                    <li ng-class="{'active': auswahl == 6}"><a href="" ng-click="auswahlHead(6)">Forum</a></li>
+                    <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7)">Logout</a></li>
                 </ul>
             </div>
         </div>
