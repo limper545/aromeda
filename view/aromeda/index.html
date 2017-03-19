@@ -1,81 +1,80 @@
-
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compitable" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aromeda</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compitable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aromeda</title>
 
-  <!-- External -->
-  <script src="../../bower_components/angular/angular.min.js"></script>
-  <script src="../../bower_components//angular-route/angular-route.js"></script>
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="../../bower_components/jquery.cookie/jquery.cookie.js"></script>
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
-  <script src="../../bower_components//socket.io-client/dist/socket.io.js"></script>
-
-
-  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="../../bower_components/angular-toastr/dist/angular-toastr.css">
-  <!-- Internal -->
+    <!-- External -->
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components//angular-route/angular-route.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="../../bower_components//socket.io-client/dist/socket.io.js"></script>
 
 
-  <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bower_components/angular-toastr/dist/angular-toastr.css">
+    <!-- Internal -->
+
+
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body ng-app="Spiel">
+<header></header>
+<div ng-view></div>
 
-  <div ng-view></div>
+<script src="./app/app.module.js"></script>
+<script src="./app/app.config.js"></script>
+<script src="Components/Header/header.component.js"></script>
+<script src="Components/Registrierung/registrierung.component.js"></script>
+<script src="Components/Login/login.component.js"></script>
+<script src="Components/Login/login.component.js"></script>
+<script src="Components/Hauptseite/hauptseite.component.js"></script>
+<script src="Service/socket.factory.js"></script>
 
-  <script src="./app/app.module.js"></script>
-  <script src="./app/app.config.js"></script>
-  <script src="Components/Registrierung/registrierung.component.js"></script>
-  <script src="Components/Login/login.component.js"></script>
-  <script src="Components/Login/login.component.js"></script>
-  <script src="Components/Hauptseite/hauptseite.component.js"></script>
-  <script src="Service/socket.factory.js"></script>
-
-  <script>
-  //Die Ng-Model namen müssen kürzer sein
-  //Spinner einblenden, während der Registrierungsphase (Beachten Readme)
-
-
-
-  //Script für Key eingabe
-
-  var getDataForCheckKey = function (userData) {
-    //Spinner einblenden während der Verabeitung (Beachten Readme)
-    $get('checkKey', userData, function (err, res) {
-      if (err) throw new Error(err);
-
-      if (res.checked) {
-        //Meldung an Nutzer das alles geklappt hat
-        //Weiterleitung zum Login
-      } else if (!res.checked) {
-        if(res.userName) {
-          //Meldung das der Username nicht vergeben ist
-        } else if (res.key) {
-          //Meldung das der Key falsch ist
-        }
-      }
-    })
-  }
+<script>
+    //Die Ng-Model namen müssen kürzer sein
+    //Spinner einblenden, während der Registrierungsphase (Beachten Readme)
 
 
-  //Script für Login
+    //Script für Key eingabe
 
-  var passwortVergessen = function () {
+    var getDataForCheckKey = function (userData) {
+        //Spinner einblenden während der Verabeitung (Beachten Readme)
+        $get('checkKey', userData, function (err, res) {
+            if (err) throw new Error(err);
 
-  }
+            if (res.checked) {
+                //Meldung an Nutzer das alles geklappt hat
+                //Weiterleitung zum Login
+            } else if (!res.checked) {
+                if (res.userName) {
+                    //Meldung das der Username nicht vergeben ist
+                } else if (res.key) {
+                    //Meldung das der Key falsch ist
+                }
+            }
+        })
+    }
 
-  var benutzerNameVergessen = function () {
 
-  }
+    //Script für Login
 
-  var login = function () {
+    var passwortVergessen = function () {
 
-  }
-  </script>
+    }
+
+    var benutzerNameVergessen = function () {
+
+    }
+
+    var login = function () {
+
+    }
+</script>
 
 </body>
 </html>

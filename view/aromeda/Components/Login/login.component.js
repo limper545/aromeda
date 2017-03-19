@@ -12,7 +12,7 @@ angular.module('login', [])
                         if (res.login) {
                             $.cookie("session", loginData.user);
                             $timeout(function () {
-                                $window.location = "#/main"
+                                $window.location = '#/main';
                             }, 4000);
                             //$window.location = "#/main"
                         } else if (!res.login) {

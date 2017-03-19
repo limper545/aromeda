@@ -4,6 +4,7 @@ angular.module('Spiel', [
     'toastr',
 
     //Internal
+    'header',
     'registrierung',
     'login',
     'mainPage',
