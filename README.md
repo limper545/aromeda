@@ -11,7 +11,7 @@ Reihenfolge der Tätigkeiten in den Sprints ist zufällig
 Sprint 1 - Spieler Registration:
   +MongoDB aufsetzen
   +Angular Validation
-  -grunt file erstellen (Wird nach hinten verschoben);
+  //-grunt file erstellen (Wird nach hinten verschoben);
   +Passwort muss verschlüsselt in die DB
   +Liste machen(Ordner Planung) mit den Nötigen Daten für den User
   +HTML registration einfügen
@@ -19,12 +19,12 @@ Sprint 1 - Spieler Registration:
   +Die Registration findet über Request und Response statt, nicht über Sockets.
   +Keine Doppelten E-Mail und Benutzernamen
   +Logik für Passwörter vergleichen.
-  -Richtige Meldungen an den Nutzer ausgeben
-  -Fehler richtig abfangen.
-  -E-Mail client (Wird nach hinten geschoben, erst beschäftigen mit E-Mail server)
+  +Richtige Meldungen an den Nutzer ausgeben
+  +Fehler richtig abfangen.
+  //-E-Mail client (Wird nach hinten geschoben, erst beschäftigen mit E-Mail server)
   +Generiert ein Random Key, der mit dem Benutzer referenziert ist für die ertmalig anmeldung (Server)
-  -Mit Fehlerbehandlung, wenn eine eingabe nicht stimmt(Rot makiert)
-  -Git-REPO erstellen
+  +Mit Fehlerbehandlung, wenn eine eingabe nicht stimmt(Rot makiert)
+  +Git-REPO erstellen
 
 Sprint 2 - Spieler Anmelden in die Software:
   -Socket verbindung aufbauen.
