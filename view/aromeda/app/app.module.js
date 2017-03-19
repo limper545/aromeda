@@ -9,4 +9,5 @@ angular.module('Spiel', [
     'registrierung',
     'login',
     'mainPage',
+    'chat',
 ]);

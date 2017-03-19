@@ -2,7 +2,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="" style="font-size: 40px">Aromeda</a>
+                <a class="navbar-brand" href="#/main" style="font-size: 40px">Aromeda</a>
             </div>
             <ul class="nav navbar-nav">
                 <li ng-class="{'active': auswahl == 1 || auswahl == null}"><a href="" ng-click="auswahlHead(1)">Home</a></li>
@@ -12,7 +12,7 @@
             </ul>
             <div class="pull-right" ng-show="showHeader">
                 <ul class="nav navbar-nav">
-                    <li ng-class="{'active': auswahl == 5}"><a href="" ng-click="auswahlHead(5)">Support</a></li>
+                    <li ng-class="{'active': auswahl == 5}"><a href="#/support" ng-click="auswahlHead(5)">Support</a></li>
                     <li ng-class="{'active': auswahl == 6}"><a href="" ng-click="auswahlHead(6)">Forum</a></li>
                     <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7); logout()">Logout</a></li>
                 </ul>

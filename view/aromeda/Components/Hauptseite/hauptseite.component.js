@@ -5,8 +5,6 @@ angular.module('mainPage', [])
             this.$onInit = function () {
                 $scope.cookie = $.cookie("session");
                 socket.emit('join', 'user');
-
             };
-
         }
     });

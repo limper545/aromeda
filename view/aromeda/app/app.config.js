@@ -11,4 +11,7 @@ var app = angular.module('Spiel')
             .when("/main", {
                 template: "<main-page></main-page>"
             })
+            .when("/support", {
+                template: "<chat></chat>"
+            })
     });
