@@ -1,0 +1,29 @@
+{
+  "name": "aromeda",
+  "version": "1.0.0",
+  "description": "Aromeda:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sascha Vey",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "http": "0.0.0",
+    "http-server": "^0.9.0",
+    "jit-grunt": "^0.10.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^2.2.24",
+    "morgan": "^1.8.1",
+    "node-uuid": "^1.4.7",
+    "nodemailer": "^3.1.7",
+    "nodemon": "^1.11.0",
+    "password-hash": "^1.2.2",
+    "sendmail": "^1.1.1",
+    "time-grunt": "^1.4.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "aromeda",
+  "description": "Aromeda:",
+  "main": "index.js",
+  "authors": [
+    "Sacha Vey"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
