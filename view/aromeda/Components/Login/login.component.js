@@ -11,7 +11,6 @@ angular.module('login', [])
                     $.post(url + '/login', loginData, function (res) {
                         if (res.login) {
                             $.cookie("session", loginData.user);
-                            socket.emit('join', 'user');
                             $timeout(function () {
                                 $window.location = "#/main"
                             }, 4000);
