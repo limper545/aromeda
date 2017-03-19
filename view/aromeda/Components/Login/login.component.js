@@ -14,7 +14,6 @@ angular.module('login', [])
                             $timeout(function () {
                                 $window.location = '#/main';
                             }, 4000);
-                            //$window.location = "#/main"
                         } else if (!res.login) {
                             if (res.user) {
                                 $scope.notLoading = true;
