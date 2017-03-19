@@ -1,16 +1,19 @@
 angular.module('login', [])
     .component('login', {
         templateUrl: 'Components/Login/login.html',
-        controller: function ($scope, $location, toastr) {
+        controller: function ($scope, $window, $timeout, toastr) {
+            $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
             $scope.getLoginData = function (loginData) {
-                console.log(loginData);
+                $scope.notLoading = false;
                 $(function () {
                     $.post(url + '/login', loginData, function (res) {
-                        console.log(res);
                         if (res.login) {
-
+                            $timeout(function () {
+                                $window.location = "#/main"
+                            }, 4000);
+                            //$window.location = "#/main"
                         } else if (!res.login) {
                             if (res.user) {
                                 toastr.error('Benutzer nicht gefunden', 'Fehler');

@@ -5,5 +5,6 @@ angular.module('Spiel', [
 
     //Internal
     'registrierung',
-    'login'
+    'login',
+    'mainPage',
 ]);

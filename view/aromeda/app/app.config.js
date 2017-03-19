@@ -8,4 +8,7 @@ var app = angular.module('Spiel')
             .when("/login", {
                 template: "<login></login>"
             })
+            .when("/main", {
+                template: "<main-page></main-page>"
+            })
     });
