@@ -1,8 +1,10 @@
 angular.module('login', [])
     .component('login', {
         templateUrl: 'Components/Login/login.html',
-        controller: function ($scope, $window, $timeout, toastr) {
+        controller: function ($scope, $window, $timeout, toastr, socket) {
             $scope.notLoading = true;
+
+            socket.emit('join', 'Test');
 
             var url = 'http://localhost:3000';
             $scope.getLoginData = function (loginData) {

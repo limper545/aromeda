@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 var passwordHash = require('password-hash');
 const port = 3000;
 const mongoDB = require('./server/mongo.js');
-
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -65,6 +66,8 @@ app.post('/login', function (req, res) {
 
 });
 
-app.listen(port, function (req, res) {
+server.listen(port, function (req, res) {
     console.log('Server läuft auf Port: ' + port);
 });
+
+var websocketController = require('./server/websockets')(io);

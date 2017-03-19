@@ -25,6 +25,7 @@
     "nodemon": "^1.11.0",
     "password-hash": "^1.2.2",
     "sendmail": "^1.1.1",
+    "socket.io": "^1.7.3",
     "time-grunt": "^1.4.0"
   }
 }
