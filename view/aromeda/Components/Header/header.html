@@ -10,11 +10,16 @@
                 <li ng-class="{'active': auswahl == 3}"><a href="" ng-click="auswahlHead(3)">Manual</a></li>
                 <li ng-class="{'active': auswahl == 4}"><a href="" ng-click="auswahlHead(4)">About us</a></li>
             </ul>
-            <div class="pull-right">
+            <div class="pull-right" ng-show="showHeader">
                 <ul class="nav navbar-nav">
                     <li ng-class="{'active': auswahl == 5}"><a href="" ng-click="auswahlHead(5)">Support</a></li>
                     <li ng-class="{'active': auswahl == 6}"><a href="" ng-click="auswahlHead(6)">Forum</a></li>
                     <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7)">Logout</a></li>
+                </ul>
+            </div>
+            <div class="pull-right" ng-show="!showHeader">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7)">Login</a></li>
                 </ul>
             </div>
         </div>
