@@ -18,13 +18,11 @@ app.get('/', function (req, res) {
 });
 
 
-
-function makeid()
-{
+function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for( var i=0; i < 10; i++ )
+    for (var i = 0; i < 10; i++)
         text += possible.charAt(Math.floor(Math.random() * possible.length));
 
     return text;
@@ -37,14 +35,14 @@ app.post('/userReg', function (req, res) {
                 if (response2 == null) {
                     req.body.key = makeid();
                     mongoDB.userSave(req.body, function (err, response3) {
-                        res.send({saved:true});
+                        res.send({saved: true});
                     })
-                }else {
-                    res.send({email:true});
+                } else {
+                    res.send({email: true});
                 }
             })
         } else
-            res.send({user:true});
+            res.send({user: true});
     });
 
 });
@@ -54,12 +52,18 @@ app.post('/login', function (req, res) {
 
     mongoDB.existUser(req.body.user, function (err, response) {
         if (response == null) {
-            res.send({user:true});
+            res.send({user: true});
         } else {
-            if(passwordHash.verify(req.body.passwort, response.passwort)) {
-                res.send({login:true});
+            if (passwordHash.verify(req.body.passwort, response.passwort)) {
+                if (!response.status) {
+                    mongoDB.updateStatusOnline(req.body.user, function (err, response2) {
+                        res.send({login: true});
+                    });
+                } else {
+                    res.send({online: true});
+                }
             } else {
-                res.send({passwort:true});
+                res.send({passwort: true});
             }
         }
     });

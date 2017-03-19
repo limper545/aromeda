@@ -1,20 +1,31 @@
 angular.module('header', [])
     .component('header', {
         templateUrl: 'Components/Header/header.html',
-        controller: function ($scope, $location, toastr, socket, $interval) {
+        controller: function ($scope, $window, $timeout, toaster, socket, $interval) {
             $scope.auswahlHead = function (headData) {
                 $scope.auswahl = headData;
             };
 
-            stop = $interval(function () {
-                console.log('Interval');
-                if ($.cookie("session")) {
+            $scope.logout = function () {
+                socket.emit('logout', $.cookie("session"));
+            };
 
+            socket.on('sucLogout', function (data){
+                if(data.nModified == 1){
+                    $.removeCookie("session");
+                    $scope.showHeader = false;
+                    $window.location = '#/login';
+                }else {
+                    toaster.pop('error', 'Error', 'Fehler beim Logout');
+                }
+            });
+
+            $interval(function () {
+                if ($.cookie("session")) {
                     $scope.showHeader = true;
-                    $interval.cancel(stop);
                 } else {
                     $scope.showHeader = false;
                 }
-            }, 500)
+            }, 10)
         }
     });

@@ -1,7 +1,8 @@
 angular.module('Spiel', [
     //External
     'ngRoute',
-    'toastr',
+    'toaster',
+    'ngAnimate',
 
     //Internal
     'header',

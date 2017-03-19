@@ -8,10 +8,11 @@
     <!-- External -->
     <script src="../../bower_components/angular/angular.min.js"></script>
     <script src="../../bower_components//angular-route/angular-route.js"></script>
+    <script src="../../bower_components//angular-animate/angular-animate.js"></script>
     <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../../bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="../../bower_components/AngularJS-Toaster/toaster.js"></script>
     <script src="../../bower_components/socket.io-client/dist/socket.io.js"></script>
     <script src="../../bower_components//socket.io-client/dist/socket.io.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
@@ -19,13 +20,16 @@
 
 
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../../bower_components/angular-toastr/dist/angular-toastr.css">
+    <link rel="stylesheet" href="../../bower_components/AngularJS-Toaster/toaster.css">
     <!-- Internal -->
 
 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body ng-app="Spiel" id="bodyContent">
+<toaster-container
+        toaster-options="{'time-out': 3000,
+                'position-class': 'toast-bottom-right','close-button':true, 'limit': 1}"></toaster-container>
 <header></header>
 <div ng-view></div>
 

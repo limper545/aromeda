@@ -13,6 +13,8 @@
     "angular-toastr": "^2.1.1",
     "angular-route": "1.5.8",
     "socket.io-client": "^1.7.2",
-    "jquery.cookie": "^1.4.1"
+    "jquery.cookie": "^1.4.1",
+    "AngularJS-Toaster": "angularjs-toaster#^2.1.0",
+    "angular-animate": "1.5.8"
   }
 }

@@ -44,11 +44,40 @@ module.exports = {
                 data: userData.date,
                 username: userData.userName,
                 passwort: passwordHash.generate(userData.passOne),
-                key: userData.key
+                key: userData.key,
+                status: false
 
             }, function (err, result) {
                 callback(err, result);
             });
+            db.close();
+        })
+    },
+
+    updateStatusOnline: function (userName, callback) {
+        MongoClient.connect(config, function connect(err, db) {
+            if (err) throw err;
+            console.log('Verbunden mit MongoDB');
+            db.collection(USER).updateOne(
+                { username : userName },
+                { $set: { status : true } }
+            , function (err, result) {
+                callback(err, result);
+            });
+            db.close();
+        })
+    },
+
+    updateStatusOffline: function (userName, callback) {
+        MongoClient.connect(config, function connect(err, db) {
+            if (err) throw err;
+            console.log('Verbunden mit MongoDB');
+            db.collection(USER).updateOne(
+                { username : userName },
+                { $set: { status : false } }
+                , function (err, result) {
+                    callback(err, result);
+                });
             db.close();
         })
     }

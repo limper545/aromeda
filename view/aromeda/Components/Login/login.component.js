@@ -1,7 +1,7 @@
 angular.module('login', [])
     .component('login', {
         templateUrl: 'Components/Login/login.html',
-        controller: function ($scope, $window, $timeout, toastr, socket) {
+        controller: function ($scope, $window, $timeout, toaster, socket) {
             $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
@@ -17,10 +17,13 @@ angular.module('login', [])
                         } else if (!res.login) {
                             if (res.user) {
                                 $scope.notLoading = true;
-                                toastr.error('Benutzer nicht gefunden', 'Fehler');
+                                toaster.pop('error', "Fehler", "Benutzer nicht gefunden");
                             } else if (res.passwort) {
                                 $scope.notLoading = true;
-                                toastr.error('Falsches Passwort', 'Fehler');
+                                toaster.pop('error', "Fehler", "Falsches Passwort");
+                            } else if (res.online) {
+                                $scope.notLoading = true;
+                                toaster.pop('error', "Fehler", "User ist bereits Online");
                             }
                         }
                     })

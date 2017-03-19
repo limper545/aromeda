@@ -1,7 +1,7 @@
 angular.module('registrierung', [])
     .component('registrierung', {
         templateUrl: 'Components/Registrierung/registrierung.html',
-        controller: function ($scope, $window, $timeout, toastr) {
+        controller: function ($scope, $window, $timeout, toaster) {
             $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
@@ -12,8 +12,6 @@ angular.module('registrierung', [])
                 var isPasswortEqual = checkPasswortIsEqual(getData.passOne, getData.passTwo);
 
                 if (isPasswortEqual) {
-
-                    //GET und POST und keine Socket verbindung
                     $(function () {
                         $.post(url + '/userReg', getData, function (res) {
                             if (res.saved) {
@@ -25,10 +23,9 @@ angular.module('registrierung', [])
 
                                 $scope.notLoading = true;
                                 if (res.email) {
-                                    toastr.error('Die E-Mail wird bereits verwendet', 'Fehler');
+                                    toaster.pop('error', "Fehler", "Die E-Mail wird bereits verwendet");
                                 } else if (res.user) {
-
-                                    toastr.error('Der Benutzername wird bereits verwendet', 'Fehler');
+                                    toaster.pop('error', "Fehler", "Der Benutzername wird bereits verwendet");
                                 }
                             }
                         })
@@ -36,7 +33,7 @@ angular.module('registrierung', [])
 
                 } else {
                     $scope.notLoading = true;
-                    toastr.error('Die Passwörter sind nicht identisch', 'Fehler');
+                    toaster.pop('error', "Fehler", "Die Passwörter sind nicht identisch");
                 }
             };
 
