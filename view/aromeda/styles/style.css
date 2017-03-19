@@ -1,5 +1,6 @@
-html, body {
-
+ #bodyContent {
+    font-weight: bold;
+     font-family: 'Audiowide', cursive;
 }
 
 /*CSS für Registrierug*/

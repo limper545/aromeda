@@ -7,6 +7,7 @@ angular.module('registrierung', [])
             var url = 'http://localhost:3000';
 
             $scope.getAllRegData = function (getData) {
+
                 $scope.notLoading = false;
                 var isPasswortEqual = checkPasswortIsEqual(getData.passOne, getData.passTwo);
 
@@ -21,9 +22,12 @@ angular.module('registrierung', [])
                                     $window.location = "#/login"
                                 }, 4000);
                             } else if (!res.saved) {
+
+                                $scope.notLoading = true;
                                 if (res.email) {
                                     toastr.error('Die E-Mail wird bereits verwendet', 'Fehler');
                                 } else if (res.user) {
+
                                     toastr.error('Der Benutzername wird bereits verwendet', 'Fehler');
                                 }
                             }
@@ -31,6 +35,7 @@ angular.module('registrierung', [])
                     })
 
                 } else {
+                    $scope.notLoading = true;
                     toastr.error('Die Passwörter sind nicht identisch', 'Fehler');
                 }
             };

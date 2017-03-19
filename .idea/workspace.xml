@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b076c1-56c6-45e4-9f85-ca09416ff582" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Header/header.component.js" afterPath="$PROJECT_DIR$/view/aromeda/Components/Header/header.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Header/header.html" afterPath="$PROJECT_DIR$/view/aromeda/Components/Header/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js" afterPath="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/index.html" afterPath="$PROJECT_DIR$/view/aromeda/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/aromeda/styles/style.css" afterPath="$PROJECT_DIR$/view/aromeda/styles/style.css" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Header/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -62,8 +63,38 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/aromeda/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="16" column="100" lean-forward="false" selection-start-line="16" selection-start-column="100" selection-end-line="16" selection-end-column="100" />
+            <state relative-caret-position="153">
+              <caret line="17" column="104" lean-forward="false" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/aromeda/styles/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registrierung.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registrierung.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,6 +113,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>console</find>
+      <find>body</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,7 +124,6 @@
       <list>
         <option value="$PROJECT_DIR$/view/aromeda/app/app.config.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Login/login.html" />
-        <option value="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html" />
         <option value="$PROJECT_DIR$/view/aromeda/Service/socket.factory.js" />
         <option value="$PROJECT_DIR$/server.js" />
@@ -101,10 +132,11 @@
         <option value="$PROJECT_DIR$/view/aromeda/app/app.module.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Hauptseite/hauptseite.component.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Login/login.component.js" />
-        <option value="$PROJECT_DIR$/view/aromeda/index.html" />
-        <option value="$PROJECT_DIR$/view/aromeda/styles/style.css" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Header/header.component.js" />
         <option value="$PROJECT_DIR$/view/aromeda/Components/Header/header.html" />
+        <option value="$PROJECT_DIR$/view/aromeda/index.html" />
+        <option value="$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js" />
+        <option value="$PROJECT_DIR$/view/aromeda/styles/style.css" />
       </list>
     </option>
   </component>
@@ -212,6 +244,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Registrierung" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,7 +463,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9840000" />
+    <option name="totallyTimeSpent" value="10406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -644,6 +680,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="78" column="58" lean-forward="false" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -721,21 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -800,22 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="100" lean-forward="false" selection-start-line="16" selection-start-column="100" selection-end-line="16" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/aromeda/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="147" column="22" lean-forward="false" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/aromeda/app/app.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -839,6 +845,38 @@
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aromeda/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="104" lean-forward="false" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aromeda/Components/Registrierung/registrierung.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/aromeda/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
