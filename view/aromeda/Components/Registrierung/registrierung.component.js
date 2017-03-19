@@ -1,7 +1,7 @@
 angular.module('registrierung', [])
     .component('registrierung', {
         templateUrl: 'Components/Registrierung/registrierung.html',
-        controller: function ($scope, $location,  toastr) {
+        controller: function ($scope, $window,  toastr) {
             $scope.notLoading = true;
 
             var url = 'http://localhost:3000';
@@ -17,9 +17,10 @@ angular.module('registrierung', [])
                     //GET und POST und keine Socket verbindung
                     $(function () {
                         $.post(url + '/userReg', getData, function (res) {
-                            console.log(res);
+                            console.log(res.saved);
                             if (res.saved) {
-                                $location.path('/login');
+                                console.log('Bin drin');
+                                $window.location = "#/login"
                             } else if (!res.saved) {
                                 if (res.email) {
                                     toastr.error('Die E-Mail wird bereits verwendet', 'Fehler');

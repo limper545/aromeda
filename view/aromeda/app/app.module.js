@@ -1,8 +1,9 @@
 angular.module('Spiel', [
-  //External
+    //External
     'ngRoute',
     'toastr',
 
-  //Internal
-  'registrierung'
-])
+    //Internal
+    'registrierung',
+    'login'
+]);
