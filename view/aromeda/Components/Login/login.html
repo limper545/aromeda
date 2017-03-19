@@ -1,10 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h3>Login</h3>
-</body>
-</html>
+<h3> Login </h3>
+<div class="row">
+    <div class="col-md-2 col-md-offset-5">
+        <form name="myForm" novalidate>
+            <!--<div ng-show="!notLoading">-->
+                <!--<div class="loader">-->
+                    <!--<div class="loader-inner">-->
+                        <!--<div class="loader-line-wrap">-->
+                            <!--<div class="loader-line"></div>-->
+                        <!--</div>-->
+                        <!--<div class="loader-line-wrap">-->
+                            <!--<div class="loader-line"></div>-->
+                        <!--</div>-->
+                        <!--<div class="loader-line-wrap">-->
+                            <!--<div class="loader-line"></div>-->
+                        <!--</div>-->
+                        <!--<div class="loader-line-wrap">-->
+                            <!--<div class="loader-line"></div>-->
+                        <!--</div>-->
+                        <!--<div class="loader-line-wrap">-->
+                            <!--<div class="loader-line"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <table class="center" id="tableReg">
+                <tbody>
+                    <tr>
+                        <td><label> Benutzername: </label></td>
+                        <td class="col-md-10"><input type='text' class="form-control" id='userNameLogin'
+                                                    ng-model='login.user' required/>
+                        </td>
+                    </tr>
+                <tr>
+                    <td><label> Passwort: </label></td>
+                    <td class="col-md-10"><input type='password' class="form-control" id='loginPasswort'
+                                                ng-model='login.passwort' required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <button id='submitReg' ng-disabled="myForm.$invalid"
+                                class="btn btn-success col-md-7"
+                                ng-click='getLoginData(login)'> Login
+                        </button>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+

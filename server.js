@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+var passwordHash = require('password-hash');
 const port = 3000;
 const mongoDB = require('./server/mongo.js');
 
@@ -43,6 +44,23 @@ app.post('/userReg', function (req, res) {
             })
         } else
             res.send({user:true});
+    });
+
+});
+
+app.post('/login', function (req, res) {
+    var hashedPass = passwordHash.generate(req.body.passwort);
+
+    mongoDB.existUser(req.body.user, function (err, response) {
+        if (response == null) {
+            res.send({user:true});
+        } else {
+            if(passwordHash.verify(req.body.passwort, response.passwort)) {
+                res.send({login:true});
+            } else {
+                res.send({passwort:true});
+            }
+        }
     });
 
 });
