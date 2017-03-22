@@ -12,17 +12,16 @@
             </ul>
             <div class="pull-right" ng-show="showHeader">
                 <ul class="nav navbar-nav">
-                    <li ng-class="{'active': auswahl == 5}"><a href="#/support" ng-click="auswahlHead(5)">Support</a></li>
+                    <li ng-class="{'active': auswahl == 5}"><a href="" ng-click="auswahlHead(5); supportChat()">Support</a></li>
                     <li ng-class="{'active': auswahl == 6}"><a href="" ng-click="auswahlHead(6)">Forum</a></li>
                     <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7); logout()">Logout</a></li>
                 </ul>
             </div>
             <div class="pull-right" ng-show="!showHeader">
                 <ul class="nav navbar-nav">
-                    <li ng-class="{'active': auswahl == 7}"><a href="" ng-click="auswahlHead(7)">Login</a></li>
+                    <li ng-class="{'active': auswahl == 7}"><a href="#/login" ng-click="auswahlHead(7)">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 </div>
-

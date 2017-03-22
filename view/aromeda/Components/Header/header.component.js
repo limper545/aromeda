@@ -20,6 +20,10 @@ angular.module('header', [])
                 }
             });
 
+$scope.supportChat = function () {
+  $window.location.href = "#/support";
+}
+
             $interval(function () {
                 if ($.cookie("session")) {
                     $scope.showHeader = true;

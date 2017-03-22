@@ -1,10 +1,10 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-const config = 'mongodb://localhost/aromeda';
+const config = 'mongodb://127.0.0.1/aromeda';
 const USER = 'user';
+const CHAT = 'chat';
 var passwordHash = require('password-hash');
-//const uid = require('uuid-node');
-//Abfrage ob Benutzername oder E-Mail gibt
+
 module.exports = {
     existUser: function (userName, callback) {
         MongoClient.connect(config, function connect(err, db) {
@@ -80,5 +80,29 @@ module.exports = {
                 });
             db.close();
         })
+    },
+
+    saveChat: function (data, callback) {
+      MongoClient.connect(config, function connect(err,db) {
+        if (err) throw err;
+        db.collection(CHAT).insertOne({
+            nameClient: data.name,
+            textClient: data.text,
+            timeCLient: data.time
+        }, function(err, result) {
+          callback(err, result)
+        });
+        db.close();
+      })
+    },
+
+    loadChat: function (callback) {
+      MongoClient.connect(config, function connect(err, db) {
+        if (err) throw err;
+        db.collection(CHAT).find({}).toArray(function (err, result){
+          callback(err, result);
+        });
+        db.close();
+      })
     }
 };
