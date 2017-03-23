@@ -1,6 +1,14 @@
-<div id="text" style="width: 46%; height: 440px; margin-left: 33%; border: 2px solid darkgreen"></div>
-<div style="width: 46%; height: 100px; margin-left: 33%; border: 2px solid red">
-  <input ng-show="loggedIn" type="textarea" id="chatSend">
-  <button ng-show="loggedIn" class="btn btn-info" id="sendenText">Senden</button>
-  <button ng-show="!loggedIn" class="btn btn-info" ng-click="loginChat()">Login</button>
-</div>
+<div id="text" style="width: 46%; height: 440px; margin-left: 33%; border: 2px solid darkgreen; overflow: overlay; border-radius: 5px;">
+  <table>
+    <tbody>
+      <tr ng-repeat="clientMessages in chatMessages | orderBy: 'timeCLient'">
+        <td>
+          [{{clientMessages.timeCLient}}] {{clientMessages.nameClient}}: {{clientMessages.textClient}}
+        </td>
+      </tr>
+    </tbody>
+  </table></div>
+  <div style="width: 46%; height: 100px; margin-left: 33%; border: 2px solid red">
+    <input type="textarea" id="chatSend">
+    <button class="btn btn-info" id="sendenText">Senden</button>
+  </div>

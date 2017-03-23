@@ -99,7 +99,7 @@ module.exports = {
     loadChat: function (callback) {
       MongoClient.connect(config, function connect(err, db) {
         if (err) throw err;
-        db.collection(CHAT).find({}).toArray(function (err, result){
+        db.collection(CHAT).find({}).limit(40).sort({timeCLient:-1}).toArray(function (err, result){
           callback(err, result);
         });
         db.close();

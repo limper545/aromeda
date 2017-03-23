@@ -24,7 +24,7 @@ exports = module.exports = function (io) {
       mongoDB.loadChat( function (err, result) {
         socket.emit('findAllChats', result);
       })
-    //  socket.emit('chat2', { zeit: new Date(), text: 'Du bist nun mit dem Server verbunden!'});
+      //  socket.emit('chat2', { zeit: new Date(), text: 'Du bist nun mit dem Server verbunden!'});
     })
 
     socket.on('chat', function (data) {
@@ -34,10 +34,6 @@ exports = module.exports = function (io) {
         io.sockets.in('chat').emit('chat', { zeit: new Date(), name: data.name || 'Anonym', text: data.text });
       });
     });
-
-
-
-
     // socket.on('test', function (data) {
     //     console.log(data);
     //     io.sockets.in('user').emit('funzt', 'Server funzt')

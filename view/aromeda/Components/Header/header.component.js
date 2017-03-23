@@ -1,35 +1,36 @@
 angular.module('header', [])
-    .component('header', {
-        templateUrl: 'Components/Header/header.html',
-        controller: function ($scope, $window, $timeout, toaster, socket, $interval) {
-            $scope.auswahlHead = function (headData) {
-                $scope.auswahl = headData;
-            };
+.component('header', {
+  templateUrl: 'Components/Header/header.html',
+  controller: function ($scope, $window, $timeout, toaster, socket, $interval) {
+    $scope.auswahlHead = function (headData) {
+      $scope.auswahl = headData;
+    };
 
-            $scope.logout = function () {
-                socket.emit('logout', $.cookie("session"));
-            };
+    $scope.logout = function () {
+      socket.emit('logout', $.cookie("session"));
+    };
 
-            socket.on('sucLogout', function (data){
-                if(data.nModified == 1){
-                    $.removeCookie("session");
-                    $scope.showHeader = false;
-                    $window.location = '#/login';
-                }else {
-                    toaster.pop('error', 'Error', 'Fehler beim Logout');
-                }
-            });
-
-$scope.supportChat = function () {
-  $window.location.href = "#/support";
-}
-
-            $interval(function () {
-                if ($.cookie("session")) {
-                    $scope.showHeader = true;
-                } else {
-                    $scope.showHeader = false;
-                }
-            }, 10)
-        }
+    socket.on('sucLogout', function (data){
+      if(data.nModified == 1){
+        $.removeCookie("session");
+        $scope.showHeader = false;
+        $window.location = '#/login';
+      }else {
+        toaster.pop('error', 'Error', 'Fehler beim Logout');
+      }
     });
+
+    $scope.supportChat = function () {
+      socket.getSocket().removeAllListeners();
+      $window.location.href = "#/support";
+    }
+
+    $interval(function () {
+      if ($.cookie("session")) {
+        $scope.showHeader = true;
+      } else {
+        $scope.showHeader = false;
+      }
+    }, 10)
+  }
+});
