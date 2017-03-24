@@ -1,14 +1,26 @@
-<div id="text" style="width: 46%; height: 440px; margin-left: 33%; border: 2px solid darkgreen; overflow: overlay; border-radius: 5px;">
+<div id="text" style="display: inline-block; width: 46%; height: 440px; margin-left: 25%; border: 2px solid darkgreen; overflow: overlay; border-radius: 5px;">
   <table>
     <tbody>
       <tr ng-repeat="clientMessages in chatMessages | orderBy: 'timeCLient'">
         <td>
-          [{{clientMessages.timeCLient}}] {{clientMessages.nameClient}}: {{clientMessages.textClient}}
+          [{{clientMessages.timeClient}}] {{clientMessages.nameClient}}: {{clientMessages.textClient}}
         </td>
       </tr>
     </tbody>
-  </table></div>
-  <div style="width: 46%; height: 100px; margin-left: 33%; border: 2px solid red">
-    <input type="textarea" id="chatSend">
-    <button class="btn btn-info" id="sendenText">Senden</button>
-  </div>
+  </table>
+</div>
+<div style="display:inline-block;height: 440px; width: 10%; border:2px solid black;">
+  <table>
+    <tbod>
+      <tr ng-repeat="user in userArrayOnline">
+        <td style="width: 100%!important">
+          {{user}} online
+        </td>
+      </tr>
+    </tbod>
+  </table>
+ </div>
+<div style="width: 46%; height: 100px; margin-left: 25%; border: 2px solid red">
+  <input type="textarea" id="chatSend">
+  <button class="btn btn-info" id="sendenText">Senden</button>
+</div>

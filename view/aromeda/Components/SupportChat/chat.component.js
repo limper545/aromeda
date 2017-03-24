@@ -4,30 +4,33 @@ angular.module('chat', [])
   controller: function ($scope, $window, $timeout, toaster, socket) {
 
     $scope.chatMessages = [];
-    $scope.loggedIn = false;
+    $scope.userArrayOnline = [];
 
     socket.on('findAllChats', function (data) {
-
       $scope.chatMessages = data;
     })
 
     this.$onInit = function () {
-
-        socket.emit('joinChat', 'null');
-      // $scope.loggedIn = true;
+      socket.emit('joinChat', 'null');
     }
+
+    socket.on('userOnlineChat', function (data){
+      for(var key in data){
+        $scope.userArrayOnline.push(data[key].username)
+      }
+    })
 
     $(function () {
 
       socket.on('chat', function (data) {
         var newMessage = {
-          timeCLient: data.zeit,
+          timeClient: data.zeit,
           nameClient: data.name,
           textClient: data.text
         }
         $scope.chatMessages.push(newMessage)
       });
-      // Nachricht senden
+      //TODO Umbauen auf angular
       function senden(){
         // Eingabefelder auslesen
         var name = $.cookie("session");
