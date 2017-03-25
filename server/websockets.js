@@ -4,6 +4,7 @@ exports = module.exports = function (io) {
   io.on('connection', function (socket) {
 
     socket.on('join', function (room) {
+      console.log(socket.id)
       socket.join(room);
     });
 
@@ -13,8 +14,6 @@ exports = module.exports = function (io) {
       })
     });
 
-    socket.on('disconnect', function() {
-    })
 
     // Es wird ein Remove Listener benötigt in der Factory
     socket.on('joinChat', function (data) {

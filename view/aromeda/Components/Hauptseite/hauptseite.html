@@ -1,18 +1,3 @@
-<!--<div class="contentMain" style="display: inline-block">-->
-<!--<h2>-->
-<!--Change-Log-->
-<!--</h2>-->
-<!--<div class="imageNews">-->
-<!--<img src="../../images/maintenance.png" height="126" width="126"/>-->
-<!--</div>-->
-<!--Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris-->
-<!--condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis-->
-<!--euismod. Donec sed odio dui.-->
-<!--<p>-->
-<!--<a style="float: right" class="btn" href="#">View details »</a>-->
-<!--</p>-->
-<!--</div>-->
-
 <div class="container" style="border-top: 2px dashed black;">
     <div class="row">
         <div class="col-md-7">
@@ -24,52 +9,55 @@
                     <img src="../../images/maintenance.png" height="126" width="126"/>
                 </div>
                 {{artikel.textArt}}
-                    <a style="float: right" class="btn" href="#">View details »</a>
+                <a style="float: right" class="btn" href="#">View details »</a>
 
             </div>
 
         </div>
         <div class="col-md-5">
-            <table class="table table-striped">
-                <thead>
-                <tr >
-                    <th>
-                        #
-                    </th>
-                    <th>
-                        User
-                    </th>
-                    <th>
-                        Registriert
-                    </th>
-                    <th>
-                        E-Mail
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="user in allUserInfo | limitTo: 10">
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        {{user.username}}
-                    </td>
-                    <td>
-                        {{user.data | amDateFormat:'DD.MM.YYYY'}}
-                    </td>
-                    <td>
-                        {{user.email}}
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <div class="page-header">
-                <h1>
-                    LayoutIt!
-                    <small>Interface Builder for Bootstrap</small>
-                </h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            User
+                        </th>
+                        <th>
+                            Registriert
+                        </th>
+                        <th>
+                            E-Mail
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="user in allUserInfo | limitTo: 10">
+                        <td>
+                            1
+                        </td>
+                        <td class="col-md-4">
+                            {{user.username}}
+                        </td>
+                        <td class="col-md-4">
+                            {{user.data | amDateFormat:'DD.MM.YYYY'}}
+                        </td>
+                        <td class="col-md-4">
+                            {{user.email}}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+                <div class="page-header">
+                    <h1>
+                        LayoutIt!
+                        <small>Interface Builder for Bootstrap</small>
+                    </h1>
+                </div>
             </div>
         </div>
-    </div>
+
 </div>

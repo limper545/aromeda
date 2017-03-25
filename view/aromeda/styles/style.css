@@ -10,6 +10,7 @@
 .container {
     background-color: white;
 }
+
 /*CSS für Registrierug*/
 table.center {
     margin-right: 2%;
@@ -750,6 +751,7 @@ input.ng-valid {
 
 /*SIDEBAR*/
 #sidebar-wrapper {
+    display: block;
     top: 52px;
     left: -200px;
     width: 200px;
@@ -759,7 +761,9 @@ input.ng-valid {
     height: 100%;
     z-index: 1;
 }
+
 .sidebar-nav {
+    display: block;
     position: absolute;
     top: 0;
     margin: 0;
@@ -767,30 +771,77 @@ input.ng-valid {
     width: 250px;
     list-style: none;
 }
+
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 50px;
 }
+
 .sidebar-nav li a {
     color: white;
     display: block;
     text-decoration: none;
 }
+
 .sidebar-nav li a:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
     color: white;
     text-decoration: none;
 }
+
 .sidebar-nav li a:active, .sidebar-nav li a:focus {
     text-decoration: none;
 }
+
 #sidebar-wrapper.sidebar-toggle {
     transition: all 0.3s ease-out;
     margin-left: -200px;
 }
-@media (min-width: 768px) {
+
+@media (max-width: 991px) {
     #sidebar-wrapper.sidebar-toggle {
         transition: 0s;
         left: 200px;
+    }
+
+    .sidebar-nav {
+        display: none;
+    }
+
+    #sidebar-wrapper {
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    #sidebar-wrapper.sidebar-toggle {
+        transition: 0s;
+        left: 200px;
+    }
+
+    .sidebar-nav {
+        display: block;
+    }
+
+    #sidebar-wrapper {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+
+    .navbar-header .collapse, .navbar-toggle {
+        display: block !important;
+    }
+
+    .navbar-header {
+        float: none;
     }
 }
