@@ -34,18 +34,18 @@ angular.module('chat', [])
       function senden(){
         // Eingabefelder auslesen
         var name = $.cookie("session");
-        var text = $('#chatSend').val();
+        var text = $('#inputText').val();
         // Socket senden
         console.log('Senden CLient');
         var time = new Date();
         socket.emit('chat', { name: name, text: text, time: time });
         // Text-Eingabe leeren
-        $('#chatSend').val('');
+        $('#inputText').val('');
       }
       // bei einem Klick
-      $('#sendenText').click(senden);
+      $('#sendMessage').click(senden);
 
-      $('#chatSend').keypress(function (e) {
+      $('#inputText').keypress(function (e) {
         if (e.which == 13) {
           senden();
         }
