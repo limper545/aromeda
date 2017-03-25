@@ -1,37 +1,67 @@
-<div class="chat_window">
-  <div class="top_menu">
-    <div class="buttons">
-      <div class="button close">
-      </div>
-      <div class="button minimize">
-      </div>
-      <div class="button maximize">
-      </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- DIRECT CHAT PRIMARY -->
+            <div class="box box-primary direct-chat direct-chat-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Support Chat</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body" id="bodyChatText">
+                    <!-- Conversations are loaded here -->
+                    <div class="direct-chat-messages" ng-repeat="message in chatMessages | orderBy: 'timeClient'">
+                        <!-- Message. Default to the left -->
+
+
+                        <div class="direct-chat-msg " >
+
+                            <div ng-if="message.nameClient == userNameOnlineCookie">
+                                <div class="direct-chat-info clearfix">
+                                    <span class="direct-chat-name pull-left">{{message.nameClient}}</span>
+                                    <span class="direct-chat-timestamp pull-right">{{message.timeClient | amDateFormat:'HH:mm'}}</span>
+                                </div>
+                                <!-- /.direct-chat-info -->
+                                <img class="direct-chat-img" src="http://bootdey.com/img/Content/user_1.jpg"
+                                     alt="Message User Image"><!-- /.direct-chat-img -->
+                                <div class="direct-chat-text">
+                                    {{message.textClient}}
+                                </div>
+                            </div>
+
+                            <div class="direct-chat-msg right">
+                            <div ng-if="message.nameClient != userNameOnlineCookie">
+                            <div class="direct-chat-info clearfix">
+                                <span class="direct-chat-name pull-right">{{message.nameClient}}</span>
+                                <span class="direct-chat-timestamp pull-left">{{message.timeClient | amDateFormat:'HH:mm'}}</span>
+                            </div>
+                            <!-- /.direct-chat-info -->
+                            <img class="direct-chat-img" src="http://bootdey.com/img/Content/user_2.jpg"
+                                 alt="Message User Image"><!-- /.direct-chat-img -->
+                            <div class="direct-chat-text backgroundRandom">
+                                {{message.textClient}}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.direct-chat-text -->
+                    <!-- /.direct-chat-msg -->
+                </div>
+                <!--/.direct-chat-messages-->
+            </div>
+            <!-- /.direct-chat-pane -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <div class="input-group">
+                <input type="text" id="inputText" name="message" placeholder="Type Message ..."
+                       class="form-control">
+                <span class="input-group-btn">
+                    <button id="sendMessage" class="btn btn-primary btn-flat">Send</button>
+                  </span>
+            </div>
+        </div>
+        <!-- /.box-footer-->
     </div>
-    <div class="title">Chat
-    </div>
-  </div>
-  <ul class="messages">
-  </ul>
-  <div class="bottom_wrapper clearfix">
-    <div class="message_input_wrapper">
-      <input class="message_input" id="inputText" placeholder="Type your message here..." />
-    </div>
-    <div class="send_message">
-      <div class="icon">
-      </div>
-      <div id="sendMessage" class="text">Send
-      </div>
-    </div>
-  </div>
+    <!--/.direct-chat -->
 </div>
-<div class="message_template">
-  <li class="message">
-    <div class="avatar">
-    </div>
-    <div class="text_wrapper">
-      <div class="text">
-      </div>
-    </div>
-  </li>
+</div>
 </div>

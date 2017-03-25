@@ -1,55 +1,67 @@
 angular.module('chat', [])
-.component('chat', {
-  templateUrl: 'Components/SupportChat/chat.html',
-  controller: function ($scope, $window, $timeout, toaster, socket) {
+    .component('chat', {
+        templateUrl: 'Components/SupportChat/chat.html',
+        controller: function ($scope, $window, $timeout, toaster, socket) {
 
-    $scope.chatMessages = [];
-    $scope.userArrayOnline = [];
 
-    socket.on('findAllChats', function (data) {
-      $scope.chatMessages = data;
-    })
+            $scope.chatMessages = [];
+            $scope.userArrayOnline = [];
+            $scope.userNameOnlineCookie = $.cookie("session");
 
-    this.$onInit = function () {
-      socket.emit('joinChat', 'null');
-    }
 
-    socket.on('userOnlineChat', function (data){
-      for(var key in data){
-        $scope.userArrayOnline.push(data[key].username)
-      }
-    })
+            socket.on('findAllChats', function (data) {
+                $scope.chatMessages = data;
 
-    $(function () {
+            })
 
-      socket.on('chat', function (data) {
-        var newMessage = {
-          timeClient: data.zeit,
-          nameClient: data.name,
-          textClient: data.text
+            this.$onInit = function () {
+                socket.emit('joinChat', 'null');
+            }
+
+            socket.on('userOnlineChat', function (data) {
+                for (var key in data) {
+                    $scope.userArrayOnline.push(data[key].username)
+                }
+            })
+
+            $(function () {
+
+                socket.on('chat', function (data) {
+
+                    var newMessage = {
+                        timeClient: data.zeit,
+                        nameClient: data.name,
+                        textClient: data.text
+                    }
+                    $scope.chatMessages.push(newMessage)
+
+                    $timeout(function () {
+                        $("#bodyChatText").scrollTop($("#bodyChatText")[0].scrollHeight, 200);
+                    }, 100)
+
+                });
+
+                function senden() {
+
+                    // Eingabefelder auslesen
+                    var name = $.cookie("session");
+                    var text = $('#inputText').val();
+                    // Socket senden
+                    console.log('Senden CLient');
+                    var time = new Date();
+                    socket.emit('chat', {name: name, text: text, time: time});
+                    // Text-Eingabe leeren
+                    $('#inputText').val('');
+                }
+
+                // bei einem Klick
+                $('#sendMessage').click(senden);
+
+                $('#inputText').keypress(function (e) {
+                    if (e.which == 13) {
+                        senden();
+                    }
+                });
+            })
         }
-        $scope.chatMessages.push(newMessage)
-      });
-      //TODO Umbauen auf angular
-      function senden(){
-        // Eingabefelder auslesen
-        var name = $.cookie("session");
-        var text = $('#inputText').val();
-        // Socket senden
-        console.log('Senden CLient');
-        var time = new Date();
-        socket.emit('chat', { name: name, text: text, time: time });
-        // Text-Eingabe leeren
-        $('#inputText').val('');
-      }
-      // bei einem Klick
-      $('#sendMessage').click(senden);
-
-      $('#inputText').keypress(function (e) {
-        if (e.which == 13) {
-          senden();
-        }
-      });
-    })
-  }
-});
+    });

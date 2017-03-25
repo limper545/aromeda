@@ -3,6 +3,7 @@ angular.module('Spiel', [
     'ngRoute',
     'toaster',
     'ngAnimate',
+    'angularMoment',
 
     //Internal
     'header',

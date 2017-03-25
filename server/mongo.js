@@ -1,6 +1,6 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
-const config = 'mongodb://127.0.0.1/aromeda';
+const config = 'mongodb://localhost/aromeda';
 const USER = 'user';
 const CHAT = 'chat';
 var passwordHash = require('password-hash');
