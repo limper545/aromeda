@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compitable" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <title>Aromeda</title>
 
     <!-- External -->
@@ -31,11 +31,12 @@
 
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body ng-app="Spiel" id="bodyContent">
+<body ng-app="Spiel" id="bodyContent" >
 <toaster-container
         toaster-options="{'time-out': 3000,
                 'position-class': 'toast-bottom-right','close-button':true, 'limit': 1}"></toaster-container>
 <header></header>
+<side-bar></side-bar>
 <div ng-view></div>
 
 <script src="./app/app.module.js"></script>
@@ -46,48 +47,8 @@
 <script src="Components/Login/login.component.js"></script>
 <script src="Components/Hauptseite/hauptseite.component.js"></script>
 <script src="Components/SupportChat/chat.component.js"></script>
+<script src="Components/Sidebar/sidebar.component.js"></script>
 <script src="Service/socket.factory.js"></script>
-
-<script>
-    //Die Ng-Model namen müssen kürzer sein
-    //Spinner einblenden, während der Registrierungsphase (Beachten Readme)
-
-
-    //Script für Key eingabe
-
-    var getDataForCheckKey = function (userData) {
-        //Spinner einblenden während der Verabeitung (Beachten Readme)
-        $get('checkKey', userData, function (err, res) {
-            if (err) throw new Error(err);
-
-            if (res.checked) {
-                //Meldung an Nutzer das alles geklappt hat
-                //Weiterleitung zum Login
-            } else if (!res.checked) {
-                if (res.userName) {
-                    //Meldung das der Username nicht vergeben ist
-                } else if (res.key) {
-                    //Meldung das der Key falsch ist
-                }
-            }
-        })
-    }
-
-
-    //Script für Login
-
-    var passwortVergessen = function () {
-
-    }
-
-    var benutzerNameVergessen = function () {
-
-    }
-
-    var login = function () {
-
-    }
-</script>
 
 </body>
 </html>

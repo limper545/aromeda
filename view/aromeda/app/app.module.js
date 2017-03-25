@@ -11,4 +11,5 @@ angular.module('Spiel', [
     'login',
     'mainPage',
     'chat',
+    'sideBar',
 ]);
