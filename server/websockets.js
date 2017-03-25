@@ -34,5 +34,17 @@ exports = module.exports = function (io) {
         io.sockets.in('chat').emit('chat', { zeit: new Date(), name: data.name || 'Anonym', text: data.text });
       });
     });
+
+    socket.on('getAllAcrticel', function() {
+      mongoDB.getArticels( function(err, res) {
+        socket.emit('acrticelFromServer', res);
+      })
+    })
+
+      socket.on('getAllUser', function() {
+        mongoDB.getAllUserInfo( function (err, res) {
+          socket.emit('allUserInfo', res);
+        })
+      })
   })
 };

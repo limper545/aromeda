@@ -1,6 +1,6 @@
 #bodyContent {
     font-weight: bold;
-    font-family: 'Audiowide', cursive;
+
     margin-top: 5%;
     font-size: 18px;
     background-image: url("../images/background_game.jpg");
@@ -734,7 +734,6 @@ input.ng-valid {
 /*MAIN PAGE*/
 
 .contentMain {
-    border-top: 2px dashed black;
     border-bottom: 2px dashed black;
 }
 
