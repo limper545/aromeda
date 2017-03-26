@@ -5,6 +5,7 @@ angular.module('header', [])
     $scope.auswahlHead = function (headData) {
       $scope.auswahl = headData;
     };
+    var url = 'http://localhost:3000/#/'
 
     $scope.logout = function () {
       socket.emit('logout', $.cookie("session"));
@@ -14,7 +15,9 @@ angular.module('header', [])
       if(data.nModified == 1){
         $.removeCookie("session");
         $scope.showHeader = false;
-        $window.location = '#/login';
+          window.location.href = '#/';
+          $window.location.reload();
+
       }else {
         toaster.pop('error', 'Error', 'Fehler beim Logout');
       }
