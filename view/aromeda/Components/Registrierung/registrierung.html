@@ -1,100 +1,187 @@
-<h3> Anmeldung </h3>
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
-        <form name="myForm" novalidate>
-            <div ng-show="!notLoading">
-                <div class="loader">
-                    <div class="loader-inner">
-                        <div class="loader-line-wrap">
-                            <div class="loader-line"></div>
-                        </div>
-                        <div class="loader-line-wrap">
-                            <div class="loader-line"></div>
-                        </div>
-                        <div class="loader-line-wrap">
-                            <div class="loader-line"></div>
-                        </div>
-                        <div class="loader-line-wrap">
-                            <div class="loader-line"></div>
-                        </div>
-                        <div class="loader-line-wrap">
-                            <div class="loader-line"></div>
-                        </div>
-                    </div>
-                </div>
+<!--<h3> Anmeldung </h3>-->
+<!--<div class="row">-->
+<!--<div class="col-md-4 col-md-offset-4">-->
+<!--<form name="myForm" novalidate>-->
+<!--<div ng-show="!notLoading">-->
+<!--<div class="loader">-->
+<!--<div class="loader-inner">-->
+<!--<div class="loader-line-wrap">-->
+<!--<div class="loader-line"></div>-->
+<!--</div>-->
+<!--<div class="loader-line-wrap">-->
+<!--<div class="loader-line"></div>-->
+<!--</div>-->
+<!--<div class="loader-line-wrap">-->
+<!--<div class="loader-line"></div>-->
+<!--</div>-->
+<!--<div class="loader-line-wrap">-->
+<!--<div class="loader-line"></div>-->
+<!--</div>-->
+<!--<div class="loader-line-wrap">-->
+<!--<div class="loader-line"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<table ng-show="notLoading" class="center" id="tableReg">-->
+<!--<tbody>-->
+
+<!--<tr>-->
+<!--<td><label> Name </label></td>-->
+<!--<td class="col-md-5"><input type='text'-->
+<!--class="form-control" id='regVorname' ng-model='reg.name'-->
+<!--required/></td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> Nachname </label></td>-->
+<!--<td class="col-md-2"><input type='text' class="form-control" id='regNachname'-->
+<!--ng-model='reg.nachName' required/></td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> E-Mail </label></td>-->
+<!--<td class="col-md-2"><input type='email' class="form-control" id='regEmail' ng-model='reg.mail'-->
+<!--required/>-->
+<!--<div id="meldungMail"></div>-->
+<!--</td>-->
+
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> Geburtsdatum </label></td>-->
+<!--<td class="col-md-2"><input type='date' placeholder="test" class="form-control" id='regDatum'-->
+<!--ng-model='reg.date' required/>-->
+<!--</td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> Benutzername </label></td>-->
+<!--<td class="col-md-2"><input type='text' class="form-control" id='regBenutzer'-->
+<!--ng-model='reg.userName' required/></td>-->
+<!--<td>-->
+<!--<div id="meldungUser"></div>-->
+<!--</td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> Passwort </label></td>-->
+<!--<td class="col-md-2"><input type='password' class="form-control" id='regPasswortFirst'-->
+<!--ng-model='reg.passOne' required/>-->
+<!--</td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td><label> Passwort wiederholen </label></td>-->
+
+<!--<td class="col-md-2"><input type='password' class="form-control" id='regPasswordSecond'-->
+<!--ng-model='reg.passTwo' required/>-->
+<!--<span id="meldungPasswort"></span>-->
+<!--</td>-->
+<!--</tr>-->
+
+<!--<tr>-->
+<!--<td>-->
+<!--<input ng-model='checked' type='checkbox' id='checkAGB' required/>-->
+<!--<label> Ich Akzeptiere die AGB's </label>-->
+<!--</td>-->
+<!--<td>-->
+<!--<button id='submitReg' ng-disabled="myForm.$invalid || !checked"-->
+<!--class="btn btn-success"-->
+<!--ng-click='getAllRegData(reg)'> Anmelden-->
+<!--</button>-->
+<!--</td>-->
+<!--</tr>-->
+
+<!--</tbody>-->
+<!--</table>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<div ng-show="!notLoading">
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
             </div>
-            <table ng-show="notLoading" class="center" id="tableReg">
-                <tbody>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <tr>
-                    <td><label> Name </label></td>
-                    <td class="col-md-5"><input type='text'
-                                                class="form-control" id='regVorname' ng-model='reg.name'
-                                                required/></td>
-                </tr>
+<div ng-show="notLoading" class="modal-dialog">
 
-                <tr>
-                    <td><label> Nachname </label></td>
-                    <td class="col-md-2"><input type='text' class="form-control" id='regNachname'
-                                                ng-model='reg.nachName' required/></td>
-                </tr>
 
-                <tr>
-                    <td><label> E-Mail </label></td>
-                    <td class="col-md-2"><input type='email' class="form-control" id='regEmail' ng-model='reg.mail'
-                                                required/>
-                        <div id="meldungMail"></div>
-                    </td>
 
-                </tr>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="text-center">Welcome</h1>
+        </div>
+        <div class="modal-body">
+            <form name="myForm" novalidate>
 
-                <tr>
-                    <td><label> Geburtsdatum </label></td>
-                    <td class="col-md-2"><input type='date' placeholder="test" class="form-control" id='regDatum'
-                                                ng-model='reg.date' required/>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <input type='text'
+                           class="form-control input-lg" id='regVorname' ng-model='reg.name'
+                           placeholder="Name" required/>
+                </div>
 
-                <tr>
-                    <td><label> Benutzername </label></td>
-                    <td class="col-md-2"><input type='text' class="form-control" id='regBenutzer'
-                                                ng-model='reg.userName' required/></td>
-                    <td>
-                        <div id="meldungUser"></div>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <input type='text' class="form-control input-lg" id='regNachname'
+                           ng-model='reg.nachName'  placeholder="Nachname" required/>
+                </div>
 
-                <tr>
-                    <td><label> Passwort </label></td>
-                    <td class="col-md-2"><input type='password' class="form-control" id='regPasswortFirst'
-                                                ng-model='reg.passOne' required/>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <input type='email' class="form-control input-lg" id='regEmail' ng-model='reg.mail'
+                           placeholder="E-Mail"  required/>
+                </div>
+                <div class="form-group">
+                    <input type='date' placeholder="test" class="form-control input-lg" id='regDatum'
+                           ng-model='reg.date' placeholder="Geburtsdatum" required/>
+                </div>
 
-                <tr>
-                    <td><label> Passwort wiederholen </label></td>
+                <div class="form-group">
+                    <input type='text' class="form-control input-lg" id='regBenutzer'
+                           ng-model='reg.userName' placeholder="Benutzername" required/>
+                </div>
 
-                    <td class="col-md-2"><input type='password' class="form-control" id='regPasswordSecond'
-                                                ng-model='reg.passTwo' required/>
-                        <span id="meldungPasswort"></span>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <input type='password' class="form-control input-lg" id='regPasswortFirst'
+                           ng-model='reg.passOne' placeholder="Passwort" required/>
+                </div>
 
-                <tr>
-                    <td>
-                        <input ng-model='checked' type='checkbox' id='checkAGB' required/>
-                        <label> Ich Akzeptiere die AGB's </label>
-                    </td>
-                    <td>
-                        <button id='submitReg' ng-disabled="myForm.$invalid || !checked"
-                                class="btn btn-success"
-                                ng-click='getAllRegData(reg)'> Anmelden
-                        </button>
-                    </td>
-                </tr>
+                <div class="form-group">
+                    <input type='password' class="form-control input-lg" id='regPasswordSecond'
+                           ng-model='reg.passTwo' placeholder="Passwort wiederholen" required/>
+                </div>
 
-                </tbody>
-            </table>
-        </form>
+                <div class="form-group">
+                    <input ng-model='checked' type='checkbox' id='checkAGB' required/>
+                    <label> Ich Akzeptiere die AGB's </label>
+                </div>
+
+                <div class="form-group">
+                    <input id='submitReg' ng-disabled="myForm.$invalid || !checked"
+
+                           ng-click='getAllRegData(reg)' class="btn btn-block btn-lg btn-primary"
+                           value="Registrierung"/>
+                    <span><a href="#">Forgot Password</a></span>
+
+                </div>
+            </form>
+        </div>
     </div>
 </div>

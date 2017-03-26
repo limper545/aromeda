@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-.container {
+.container-background {
     background-color: white;
 }
 
@@ -20,9 +20,9 @@ table td {
     padding: 1%;
 }
 
-#submitReg {
-    margin-left: 11px;
-}
+/*#submitReg {*/
+    /*margin-left: 11px;*/
+/*}*/
 
 h3 {
     text-align: center;
@@ -799,6 +799,15 @@ input.ng-valid {
 }
 
 @media (max-width: 991px) {
+
+    .navbar
+    {
+        min-height:65px; // or value of ur desire
+    }
+
+#bodyContent {
+    margin-top: 24%;
+}
     #sidebar-wrapper.sidebar-toggle {
         transition: 0s;
         left: 200px;
@@ -845,3 +854,6 @@ input.ng-valid {
         float: none;
     }
 }
+
+
+
